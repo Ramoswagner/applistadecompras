@@ -1,0 +1,190 @@
+<AdicionarItens>:
+
+    MDFloatLayout:
+
+        MDBoxLayout:
+            orientation: "vertical"
+            pos_hint: {"center_x": .5, "top": 1}
+            size_hint: (1, 0.15)
+            MDLabel:
+                text: "Adicione os itens!"
+                halign: "center"
+                #theme_text_color: "Custom"
+                text_color: 0, 0, 1, 1
+                font_size: "20sp"  # Tamanho da fonte
+        
+        MDTextField:
+            id: nome_input
+            
+            # Titulo do cabeçalho:
+            hint_text: "Nome do produto"
+            
+            # Texto a ser digitado:
+            text_color_normal: "black"
+            text_color_focus: "black"
+            
+            # Definindo as cores das linhas do cabeçalho
+            line_color_normal: "green"
+            line_color_focus: "FF8400"
+
+            # Texto no cabeçalho
+            hint_text_color_normal: "grey"
+            hint_text_color_focus: "green"
+            
+            # Estilo do cabeçalho:
+            mode: "rectangle"
+
+            # Texto de ajuda do cabeçalho:
+            helper_text: "Ex.: café"
+            helper_text_color_normal: "green"
+            helper_text_color_focus: "green"
+            
+            pos_hint: {"center_x": .5, "center_y": .8}
+            size_hint: 0.60, 0.1
+        
+        MDTextField:
+            id: preco_input
+            
+            # Titulo do cabeçalho:
+            hint_text: "Preço"
+            
+            # Texto a ser digitado:
+            text_color_normal: "black"
+            text_color_focus: "black"
+            
+            # Definindo as cores das linhas do cabeçalho
+            line_color_normal: "green"
+            line_color_focus: "FF8400"
+
+            # Texto no cabeçalho
+            hint_text_color_normal: "grey"
+            hint_text_color_focus: "green"
+            
+            # Estilo do cabeçalho:
+            mode: "rectangle"
+            
+            # Texto de ajuda do cabeçalho:
+            helper_text: "Ex.: R$ 15,00"
+            helper_text_color_normal: "green"
+            helper_text_color_focus: "green"
+
+            pos_hint: {"center_x": .5, "center_y": .65}
+            size_hint: 0.60, 0.1
+
+
+        MDTextField:
+            id: quantidade_input
+
+            # Titulo do cabeçalho:
+            hint_text: "Quantidade"
+
+            # Texto a ser digitado:
+            text_color_normal: "black"
+            text_color_focus: "black"
+            
+            # Definindo as cores das linhas do cabeçalho
+            line_color_normal: "green"
+            line_color_focus: "FF8400"
+
+            # Texto no cabeçalho
+            hint_text_color_normal: "grey"
+            hint_text_color_focus: "green"
+            
+            # Estilo do cabeçalho:
+            mode: "rectangle"
+            
+            # Texto de ajuda do cabeçalho:
+            helper_text: "Ex.: 2"
+            helper_text_color_normal: "green"
+            helper_text_color_focus: "green"
+            
+            pos_hint: {"center_x": .5, "center_y": .5}
+            size_hint: 0.60, 0.1
+  
+
+
+        MDRectangleFlatIconButton:
+            text: "Adicionar"
+            font_size: "18sp"  # Tamanho da fonte
+            
+            icon: "plus"
+            icon_color: "blue"
+            icon_size: "20sp"
+            
+            text_color: "white"
+
+            line_color: "00DE73"
+
+            md_bg_color: "#00DE73"
+
+            on_release: app.add_item()
+
+
+            pos_hint: {"center_x": .5, "center_y": .30}
+            size_hint: 0.60, 0.08
+
+
+        MDRectangleFlatIconButton:
+            text: "Verificar lista"
+            font_size: "18sp"  # Tamanho da fonte
+
+            icon: "view-list"
+            icon_color: "blue"
+            icon_size: "20sp"
+
+            text_color: "white"
+
+            line_color: "00DE73"
+
+            md_bg_color: "#00DE73"
+            on_release: app.vizualizar_item()
+            pos_hint: {"center_x": .25, "center_y": .15}
+            size_hint: 0.49, 0.08
+
+        
+        MDRectangleFlatIconButton:
+            # Texto:
+            text: "Finalizar"
+            text_color: "white"
+            font_size: "18sp"  # Tamanho da fonte
+
+            line_color: "00DE73"
+
+            # Icone:
+            icon: "check-all"
+            icon_color: "blue"
+            icon_size: "20sp"
+            
+            # Fundo:
+            md_bg_color: "#00DE73"
+
+            # Comando:
+            on_release: app.mudar_tela("finalizarcompra")
+
+            # Posição:
+            pos_hint: {"center_x": .75, "center_y": .15}
+
+            # Tamanho:
+            size_hint: 0.49, 0.08
+
+        MDCard:
+            size_hint: 1, .1
+            theme_text_color: "Custom"  # Adiciona esta linha
+            text_color: "white"  # Adiciona esta linha (branco)
+            style: "filled"
+            radius: [0, 0, 0, 0]
+
+            #focus_behavior: True
+            pos_hint: {"center_x":.5, "center_y": 0.05}
+            md_bg_color: "#006BDE"
+            
+
+            MDLabel:
+                id: total_parcial
+                text: "Total"
+                theme_text_color: "Custom"
+                text_color: "white"
+                halign: "center"
+                
+            
+

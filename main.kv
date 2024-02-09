@@ -1,0 +1,76 @@
+#:include kv/homepage.kv
+#:include kv/ajustespage.kv
+#:include kv/listaprincipal.kv
+#:include kv/adicionaritens.kv
+#:include kv/addacomprar.kv
+#:include kv/resumocompra.kv
+#:include kv/listassalvas.kv
+#:include kv/itenssalvos.kv
+#:include kv/comprassalvas.kv
+#:include kv/itenssalvoscompras.kv
+#:include kv/finalizarcompra.kv
+#:include kv/finalizarlista.kv
+#:include kv/adddalistaparacompra.kv
+
+MDScreen:
+    #md_bg_color: self.theme_cls.backgroundColor
+
+
+    MDScreenManager:
+
+        id: screen_manager
+        HomePage:
+            name: "homepage"
+            id: homepage
+
+        AjustesPage:
+            name: "ajustespage"
+            id: ajustespage
+  
+        ListaPrincipal:
+            name: "listaprincipal"
+            id: listaprincipal
+
+        AdicionarItens:
+            name: "adicionaritens"
+            id: adicionaritens
+
+#=========== Lista Base========        
+        AddaComprar:
+            name: "addacomprar"
+            id: addacomprar
+
+        ResumoCompra:
+            name: "resumocompra"
+            id: resumocompra
+
+#===========Salvando==========
+        ListasSalvas:
+            name: "listassalvas"
+            id: listassalvas
+
+        ItensSalvos:
+            name: "itenssalvos"
+            id: itenssalvos
+
+        ComprasSalvas:
+            name: "comprassalvas"
+            id: comprassalvas
+
+        ItensSalvosCompras:
+            name: "itenssalvoscompras"
+            id: itenssalvoscompras
+            
+#=============finalizando===========
+
+        FinalizarCompra:
+            name: "finalizarcompra"
+            id: finalizarcompra
+
+        FinalizarLista:
+            name: "finalizarlista"
+            id: finalizarlista
+
+        AddDaListaParaCompra:
+            name: "adddalistaparacompra"
+            id: adddalistaparacompra

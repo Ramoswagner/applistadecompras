@@ -1,0 +1,74 @@
+<FinalizarCompra>:
+    MDBoxLayout:
+        orientation: "vertical"
+        pos_hint: {"center_x": .5, "top": .85}
+        size_hint: (1, 0.35)
+        MDLabel:
+            text: "Deseja salvar sua compra?"
+            halign: "center"
+            #theme_text_color: "Custom"
+            text_color: 0, 0, 1, 1
+            font_size: "20sp"  # Tamanho da fonte
+
+    MDRectangleFlatIconButton:
+        # Texto:
+        text: "SIM"
+        text_color: "white"
+        font_size: "18sp"  # Tamanho da fonte
+
+        line_color: "00DE73"
+
+        # Icone:
+        icon: "check-all"
+        icon_color: "white"
+        icon_size: "20sp"
+        
+        # Fundo:
+        md_bg_color: "#00DE73"
+
+        # Comando:
+        on_release: app.salvar_compra()
+
+        # Posição:
+        pos_hint: {"center_x": .75, "center_y": .55}
+
+        # Tamanho:
+        size_hint: 0.30, 0.08
+
+
+    MDRectangleFlatIconButton:
+        # Texto:
+        text: "NÃO"
+        text_color: "white"
+        font_size: "18sp"  # Tamanho da fonte
+
+        line_color: "#DE7300"
+
+        # Icone:
+        icon: "cancel"
+        icon_color: "white"
+        icon_size: "20sp"
+        
+        # Fundo:
+        md_bg_color: "#DE7300"
+
+        # Comando:
+        on_release: app.compra_nao_salva()
+
+        # Posição:
+        pos_hint: {"center_x": .30, "center_y": .55}
+
+        # Tamanho:
+        size_hint: 0.25, 0.08
+
+    MDIconButton:
+        icon: "close"
+        pos_hint: {"center_x": .9, "center_y": .95}
+
+        # Fundo:
+        # md_bg_color: "#7300DE"
+
+        # Comando:
+        on_release: app.mudar_tela("adicionaritens")
+
+    

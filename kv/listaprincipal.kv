@@ -1,0 +1,45 @@
+<ListaPrincipal>:
+    MDFloatLayout:
+        MDCard:
+            size_hint: .3, .1
+            theme_text_color: "Custom"  # Adiciona esta linha
+            text_color: 1, 1, 1, 1  # Adiciona esta linha (branco)
+            style: "filled"
+
+            pos_hint: {"center_x": 0.75, "center_y": 0.15}
+            md_bg_color: "#006BDE"
+
+            MDLabel:
+                id: total_parcial
+                text: "Total"
+                halign: "center"
+                theme_text_color: "Custom"
+                text_color: "white"
+
+
+        MDBoxLayout:
+            orientation: "vertical"
+            MDTopAppBar:
+                title: "Voltar"
+                md_bg_color: "#00DE73"  # Cor de fundo da barra superior
+                title_color: "white"
+                opposite_colors: True
+                left_action_items: [["arrow-left", lambda x: app.mudar_tela("adicionaritens")]]
+                right_action_items:
+                    [["content-save", lambda x: app.salvar_compra()]]
+                
+            MDScrollView:
+                pos_hint: {"center_x": .5, "top": 0.80}
+                size_hint: 1, 0.80
+                MDList:
+                    id: scroll                     
+
+    
+
+
+
+
+
+
+
+

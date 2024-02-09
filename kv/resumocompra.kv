@@ -1,0 +1,19 @@
+<ResumoCompra>:
+    MDFloatLayout:
+
+        MDBoxLayout:
+            orientation: "vertical"
+            MDTopAppBar:
+                title: "    LISTA"
+                md_bg_color: "#00DE73"  # Cor de fundo da barra superior
+                title_color: "white"
+                opposite_colors: True
+                left_action_items: [["arrow-left", lambda x: app.mudar_tela("addacomprar")]]
+                right_action_items:
+                    [["content-save", lambda x: app.salvar_lista()]]
+                
+            MDScrollView:
+                pos_hint: {"center_x": .5, "top": 0.80}
+                size_hint: 1, 0.80
+                MDList:
+                    id: scroll_a_comprar                   

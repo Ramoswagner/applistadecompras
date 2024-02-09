@@ -1,0 +1,19 @@
+<AddDaListaParaCompra>:
+    MDFloatLayout:
+
+        MDBoxLayout:
+            orientation: "vertical"
+            MDTopAppBar:
+                title: "Voltar"
+                md_bg_color: "#00DE73"  # Cor de fundo da barra superior
+                title_color: "white"
+                opposite_colors: True
+                left_action_items: [["arrow-left", lambda x: app.mudar_tela("listassalvas")]]
+                right_action_items:
+                    [["cart", lambda x: app.mudar_tela("adddalistaparacompra")]]
+                
+            MDScrollView:
+                pos_hint: {"center_x": .5, "top": 0.80}
+                size_hint: 1, 0.80
+                MDList:
+                    id: scroll_itens_salvos

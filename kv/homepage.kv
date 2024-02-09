@@ -1,0 +1,96 @@
+<HomePage>:
+    MDFloatLayout:
+        MDBottomNavigation:
+            panel_color: "#006BDE" # cor anterior: "eeeaea"
+            selected_color_background: "blue"
+            text_color_active: "#00DE73"
+
+            MDBottomNavigationItem:
+                text: 'Listas'
+                icon: 'format-list-bulleted'
+                on_tab_release: app.lista_na_screen()
+
+            MDBottomNavigationItem:
+                
+                text: 'Compras'
+                icon: 'cart-outline'
+                on_tab_release: app.compra_na_screen()
+
+            MDBottomNavigationItem:
+                text: 'Ajustes'
+                icon: 'cog'
+
+        MDRaisedButton:
+            text: "No mercado."
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1  # Texto branco
+            #line_color: 0.1, 0.6, 0.1, 1  # Verde mais escuro (RGBA: vermelho=0.1, verde=0.6, azul=0.1, alfa=1)
+            md_bg_color: "#00DE73"
+            font_size: "20sp"  # Tamanho da fonte
+            size_hint: (0.8, 0.1)  # Tamanho do botão (ajuste conforme necessário)
+            pos_hint: {"center_x": .5, "center_y": .55}
+            on_release: app.mudar_tela("adicionaritens")
+
+
+        MDRaisedButton:
+            text: "Crie sua lista antes!\npara usar no mercado."
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1  # Texto branco
+            #line_color: 1, 0, 0, 1  # Vermelho (RGBA: vermelho=1, verde=0, azul=0, alfa=1)
+            md_bg_color: "#00DE73"
+            font_size: "20sp"  # Tamanho da fonte
+            size_hint: (0.8, 0.1)  # Tamanho do botão (ajuste conforme necessário)
+            pos_hint: {"center_x": .5, "center_y": .35}
+            on_release: app.mudar_tela("addacomprar")
+
+        MDIconButton:
+            icon: "cart-arrow-down"
+            pos_hint: {"center_x": .5, "top": .9}
+            #icon_size: "36sp"
+            
+
+        MDBoxLayout:
+            orientation: "vertical"
+            pos_hint: {"center_x": .5, "top": 1}
+            size_hint: (1, 0.4)
+            MDLabel:
+                text: "Bem-vindo!"
+                halign: "center"
+                #theme_text_color: "Custom"
+                text_color: 0, 0, 1, 1
+                font_size: "40sp"  # Tamanho da fonte
+
+        MDBoxLayout:
+            orientation: "vertical"
+            pos_hint: {"center_x": .5, "center_y": 0.7}
+            size_hint: (1, 0.1)
+            MDLabel:
+                text: "Como deseja criar sua lista?"
+                halign: "center"
+                #theme_text_color: "Custom"
+                text_color: 0, 0, 1, 1
+                font_size: "20sp"  # Tamanho da fonte
+        
+        MDBoxLayout:
+            orientation: "vertical"
+            pos_hint: {"center_x": .5, "center_y": 0.45}
+            size_hint: (1, 0.1)
+            MDLabel:
+                text: "Ou:"
+                halign: "center"
+                #theme_text_color: "Custom"
+                text_color: 0, 0, 1, 1
+                font_size: "20sp"  # Tamanho da fonte
+
+        
+
+          
+
+            
+
+
+
+
+        
+
+            
